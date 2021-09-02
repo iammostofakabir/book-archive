@@ -26,12 +26,12 @@ let displaySearchResult = books => {
         div.classList.add('col');
         div.innerHTML = `
             <div class="card h-100">
-                <img src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top">
+                <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">${book.title}</h5>
                     <h6>Author: ${book.author_name}</h6>
                     <h6>First Puslish Year: ${book.first_publish_year}</h6>
-                    <h6>Publisher: ${book.publisher.slice(0,4)}</h6>
+                    <h6>Publisher: ${book.publisher[0]}</h6>
                 </div>
             </div>
         `;
