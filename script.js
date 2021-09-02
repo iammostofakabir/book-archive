@@ -23,8 +23,10 @@ let displaySearchResult = books => {
     searchResult.textContent = '';
     // array load
     let booksArray = books.docs;
+    // show only 20 items
+    let slicedBooksArray = booksArray.slice(0,20);
     // insert each result into main div
-    booksArray.forEach(book => {
+    slicedBooksArray.forEach(book => {
         let div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
