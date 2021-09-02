@@ -1,26 +1,24 @@
 <html>
 <head>
-    <title>Books</title>
+    <title>Book Archive</title>
         <!-- bootstrap css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <input id="searchText" type="text">
-    <button onclick="searchBook()">search</button>
-    <!-- search result card style -->
-    <div class="container">
-        <div id="searchResult" class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div> -->
+    <section class="container mt-5">
+        <!-- heading -->
+        <h1 class="text-primary text-center my-5">Book Archive</h1>
+        <!-- search input -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="searchText"  type="text" class="form-control">
+            <button onclick="searchBook()" class="btn btn-outline-secondary">Search</button>
+        </div>
+        <!-- found result section -->
+        <h4 id="numFound" class="text-center mt-5"></h4>
+        <!-- search result card style -->
+        <div id="searchResult" class="row row-cols-1 row-cols-md-3 g-4 my-5">
           </div>
-    </div>
+    </section>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- custom js -->
