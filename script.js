@@ -25,21 +25,20 @@ let displaySearchResult = books => {
     let booksArray = books.docs;
     // insert each result into main div
     booksArray.forEach(book => {
-        console.log(book.cover_i);
         let div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
             <div class="card h-100">
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">${book.title.slice(0,50)}</h5>
+                    <h5 class="card-title">${book.title.slice(0, 50)}</h5>
                     <h6>Author: ${errorHandle(book.author_name)}</h6>
-                    <h6>First Puslish Year: ${errorHandle(book.first_publish_year)}</h6>
+                    <h6>First Puslish Year: ${book.first_publish_year}</h6>
                     <h6>Publisher: ${errorHandle(book.publisher)}</h6>
                 </div>
             </div>
         `;
-        searchResult.appendChild(div);
+        searchResult.appendChild(div); 
     })
 }
 
